@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script defer src="../js/reg.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <span style="font-size: 30px; line-height: 90px; color: #3B917C">Sign up</span><br>
+            If you already have an account register<br>
+            You can <a href="./login.html" class="link">Login here</a> or go back to the <a href="../index.html" class="link">Home page</a>!
+        </div>
+
+        <div class="text-field">
+            <label for="username" class="text-field-label">Username</label>
+            <div class="text-field-icon text-field-icon_user">
+                <input id="username" class="text-field-input" type="text" placeholder="Enter your username">
+            </div>
+            <p class="text-field-error">User with this username already exists</p>
+        </div>
+
+        <div class="text-field">
+            <label for="password" class="text-field-label">Password</label>
+            <div class="text-field-icon text-field-icon_pass">
+                <input id="password" class="text-field-input" type="password" placeholder="Enter your password" onmouseover="this.type='text'"
+                onmouseout="this.type='password'">
+            </div>
+            <p class="text-field-error">Password length less than 8</p>
+            <p class="text-field-error">Password must contain alternating symbols</p>
+
+        </div>
+
+        <div class="text-field">
+            <label for="conf_password" class="text-field-label">Confirm password</label>
+            <div class="text-field-icon text-field-icon_pass">
+                <input id="conf_password" class="text-field-input" type="password" placeholder="Confirm your password" onmouseover="this.type='text'"
+                onmouseout="this.type='password'">
+            </div>
+            <p class="text-field-error">Passwords don't match</p>
+        </div>
+
+        <button class="button">Register</button>
+    </div>
+</body>
+</html>

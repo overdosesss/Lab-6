@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <title>Crack password</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <span style="font-size: 36px; line-height: 70px; color: #df2929">Password cracker</span><br>
+            Hhere you can enter a password and try to crack it<br>
+            by using <span style="color: #df2929">brute force</span> and <span style="color: #3B5C91">dictionary search</span>
+        </div>
+
+        <div class="text-field">
+            <label for="password" class="text-field-label">Password</label>
+            <div class="text-field-icon text-field-icon_pass">
+                <input id="password" class="text-field-input" type="text" placeholder="Enter your password">
+            </div>
+        </div>
+
+        <button class="button" id="bf">Brute force</button>
+        <p class="text-field-error">Where is password?</p>
+        <p class="text-field-error">This may take some time</p>
+
+        <label class="input-file">
+            <input type="file" name="file" id="finput">		
+            <span>Choose file</span>
+        </label>
+
+        <button class="button" id="dict">Dictionary</button>
+        <p class="text-field-error">First you need to upload the file</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script defer src="../js/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <span style="font-size: 30px; line-height: 90px; color: #3B5C91">Sign in</span><br>
+            If you don’t have an account register <br>
+            You can <a href="./register.html" class="link">Register here</a> or go back to the <a href="../index.html" class="link">Home page</a>!
+        </div>
+
+        <div class="text-field">
+            <label for="username" class="text-field-label">Username</label>
+            <div class="text-field-icon text-field-icon_user">
+                <input id="username" class="text-field-input" type="text" placeholder="Enter your username">
+            </div>
+            <p class="text-field-error">There is no user with such name</p>
+        </div>
+
+        <div class="text-field">
+            <label for="password" class="text-field-label">Password</label>
+            <div class="text-field-icon text-field-icon_pass">
+                <input id="password" class="text-field-input" type="password" placeholder="Enter your password" onmouseover="this.type='text'"
+                onmouseout="this.type='password'">
+            </div>
+            <p class="text-field-error">Username and password don't match</p>
+        </div>
+
+        <button class="button">Login</button>
+    </div>
+</body>
+</html>
