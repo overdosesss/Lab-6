@@ -16,32 +16,41 @@ const checker = (password) => {
 button.addEventListener("click", (e) => {
     e.preventDefault();
     
+    const username = data[0].value;
     const firstPassw = data[1].value;
-    
-    if (firstPassw.length < 8) {
+    const secondPassw = data[2].value;
+
+    if (!username) {
         errors[1].style.display = "block";
+        return;
     } else {
         errors[1].style.display = "none";
     }
-
-    if (!checker(firstPassw)) {
+    
+    if (firstPassw.length < 8) {
         errors[2].style.display = "block";
+        return;
     } else {
         errors[2].style.display = "none";
     }
 
-    const secondPassw = data[2].value;
-
-    if (secondPassw !== firstPassw) {
+    if (!checker(firstPassw)) {
         errors[3].style.display = "block";
+        return;
     } else {
         errors[3].style.display = "none";
     }
 
-    const username = data[0].value;
+    if (secondPassw !== firstPassw) {
+        errors[4].style.display = "block";
+        return;
+    } else {
+        errors[4].style.display = "none";
+    }
 
     if (localStorage.getItem(username)) {
         errors[0].style.display = "block";
+        return;
     } else {
         errors[0].style.display = "none";
         localStorage.setItem(username, firstPassw);
